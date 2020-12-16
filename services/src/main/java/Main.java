@@ -15,6 +15,7 @@ import org.exoplatform.services.log.*;
  */
 public class Main {
   
+  
   public static void main(String[] args) {
   PortalContainer portalContainer = (PortalContainer) ExoContainerContext.getCurrentContainer();
   MyNewStartableService myNewStartableService = (MyNewStartableService) portalContainer.getComponentInstance(MyNewStartableService.class);
