@@ -1,0 +1,189 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Training addon - Parent                                            [pom]
+[INFO] Training Exercise - Services                                       [jar]
+[INFO] Training Exercises - Webapp                                        [war]
+[INFO] Training Exercises - Packaging                                     [pom]
+[INFO] 
+[INFO] -----< org.exoplatform.addons.training:training-exercices-parent >------
+[INFO] Building Training addon - Parent 1.0.x-SNAPSHOT                    [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ training-exercices-parent ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ training-exercices-parent ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ training-exercices-parent ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (default) @ training-exercices-parent ---
+[INFO] Executing: /bin/sh -c cd /home/exo/addon-project-template && git rev-parse --verify HEAD
+[INFO] Working directory: /home/exo/addon-project-template
+[INFO] Storing buildNumber: c133e089877717f2f142aa13addf20d1c17a3d60 at timestamp: 20201217
+[INFO] Storing buildScmBranch: template/add-services
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:parse-version (parse-version) @ training-exercices-parent ---
+[INFO] 
+[INFO] --- maven-source-plugin:2.4:jar-no-fork (attach-sources) @ training-exercices-parent ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ training-exercices-parent ---
+[INFO] Installing /home/exo/addon-project-template/pom.xml to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercices-parent/1.0.x-SNAPSHOT/training-exercices-parent-1.0.x-SNAPSHOT.pom
+[INFO] 
+[INFO] ----< org.exoplatform.addons.training:training-exercises-services >-----
+[INFO] Building Training Exercise - Services 1.0.x-SNAPSHOT               [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ training-exercises-services ---
+[INFO] Deleting /home/exo/addon-project-template/services/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (default) @ training-exercises-services ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ training-exercises-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ training-exercises-services ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /home/exo/addon-project-template/services/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 7
+[WARNING] source value 7 is obsolete and will be removed in a future release
+[WARNING] target value 7 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[WARNING] Exo JPA entity detected: org.exoplatform.addons.entity.FavouriteActivity
+[WARNING] Supported source version 'RELEASE_5' from annotation processor 'org.chromattic.apt.ChromatticProcessor' less than -source '7'
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ training-exercises-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/exo/addon-project-template/services/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ training-exercises-services ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ training-exercises-services ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:parse-version (parse-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ training-exercises-services ---
+[INFO] Building jar: /home/exo/addon-project-template/services/target/training-exercises-services.jar
+[INFO] 
+[INFO] --- maven-source-plugin:2.4:jar-no-fork (attach-sources) @ training-exercises-services ---
+[INFO] Building jar: /home/exo/addon-project-template/services/target/training-exercises-services-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ training-exercises-services ---
+[INFO] Installing /home/exo/addon-project-template/services/target/training-exercises-services.jar to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT.jar
+[INFO] Installing /home/exo/addon-project-template/services/pom.xml to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT.pom
+[INFO] Installing /home/exo/addon-project-template/services/target/training-exercises-services-sources.jar to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] -----< org.exoplatform.addons.training:training-exercises-webapp >------
+[INFO] Building Training Exercises - Webapp 1.0.x-SNAPSHOT                [3/4]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ training-exercises-webapp ---
+[INFO] Deleting /home/exo/addon-project-template/war/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ training-exercises-webapp ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ training-exercises-webapp ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (default) @ training-exercises-webapp ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ training-exercises-webapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/exo/addon-project-template/war/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ training-exercises-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ training-exercises-webapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/exo/addon-project-template/war/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ training-exercises-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ training-exercises-webapp ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:parse-version (parse-version) @ training-exercises-webapp ---
+[INFO] 
+[INFO] --- maven-war-plugin:2.5:war (default-war) @ training-exercises-webapp ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [training-exercises-webapp] in [/home/exo/addon-project-template/war/target/training-exercises-extension]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/exo/addon-project-template/war/src/main/webapp]
+[INFO] Webapp assembled in [35 msecs]
+[INFO] Building war: /home/exo/addon-project-template/war/target/training-exercises-extension.war
+[INFO] 
+[INFO] --- maven-source-plugin:2.4:jar-no-fork (attach-sources) @ training-exercises-webapp ---
+[INFO] No sources in project. Archive not created.
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ training-exercises-webapp ---
+[INFO] Installing /home/exo/addon-project-template/war/target/training-exercises-extension.war to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-webapp/1.0.x-SNAPSHOT/training-exercises-webapp-1.0.x-SNAPSHOT.war
+[INFO] Installing /home/exo/addon-project-template/war/pom.xml to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-webapp/1.0.x-SNAPSHOT/training-exercises-webapp-1.0.x-SNAPSHOT.pom
+[INFO] 
+[INFO] ----< org.exoplatform.addons.training:training-exercices-packaging >----
+[INFO] Building Training Exercises - Packaging 1.0.x-SNAPSHOT             [4/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/exoplatform/social/social-component-core/5.0.1/social-component-core-5.0.1.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/exoplatform/social/social-component-core/5.0.1/social-component-core-5.0.1.pom (18 kB at 28 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/exoplatform/social/social-component-core/5.0.1/social-component-core-5.0.1.jar
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar (450 kB at 1.4 MB/s)
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/exoplatform/social/social-component-core/5.0.1/social-component-core-5.0.1.jar (965 kB at 1.8 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (default) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:parse-version (parse-version) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- maven-source-plugin:2.4:jar-no-fork (attach-sources) @ training-exercices-packaging ---
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.5:single (package-addon) @ training-exercices-packaging ---
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-archiver/2.8.2/plexus-archiver-2.8.2.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-archiver/2.8.2/plexus-archiver-2.8.2.pom (4.1 kB at 50 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-io/2.3.3/plexus-io-2.3.3.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-io/2.3.3/plexus-io-2.3.3.pom (2.8 kB at 35 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-repository-builder/1.0-alpha-2/maven-repository-builder-1.0-alpha-2.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-repository-builder/1.0-alpha-2/maven-repository-builder-1.0-alpha-2.pom (3.2 kB at 40 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-shared-components/7/maven-shared-components-7.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-shared-components/7/maven-shared-components-7.pom (2.6 kB at 19 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-common-artifact-filters/1.0-alpha-1/maven-common-artifact-filters-1.0-alpha-1.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-common-artifact-filters/1.0-alpha-1/maven-common-artifact-filters-1.0-alpha-1.pom (1.8 kB at 24 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-shared-components/6/maven-shared-components-6.pom
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-shared-components/6/maven-shared-components-6.pom (3.1 kB at 40 kB/s)
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-archiver/2.8.2/plexus-archiver-2.8.2.jar
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-io/2.3.3/plexus-io-2.3.3.jar
+[INFO] Downloading from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-repository-builder/1.0-alpha-2/maven-repository-builder-1.0-alpha-2.jar
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/apache/maven/shared/maven-repository-builder/1.0-alpha-2/maven-repository-builder-1.0-alpha-2.jar (23 kB at 279 kB/s)
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-archiver/2.8.2/plexus-archiver-2.8.2.jar (143 kB at 1.5 MB/s)
+[INFO] Downloaded from exo-mirror: https://repository.exoplatform.org/public/org/codehaus/plexus/plexus-io/2.3.3/plexus-io-2.3.3.jar (79 kB at 279 kB/s)
+[INFO] Reading assembly descriptor: src/main/assemblies/packaging.xml
+[INFO] Building zip: /home/exo/addon-project-template/packaging/target/training-exercises-packaging.zip
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ training-exercices-packaging ---
+[INFO] Installing /home/exo/addon-project-template/packaging/pom.xml to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercices-packaging/1.0.x-SNAPSHOT/training-exercices-packaging-1.0.x-SNAPSHOT.pom
+[INFO] Installing /home/exo/addon-project-template/packaging/target/training-exercises-packaging.zip to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercices-packaging/1.0.x-SNAPSHOT/training-exercices-packaging-1.0.x-SNAPSHOT.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Training addon - Parent 1.0.x-SNAPSHOT:
+[INFO] 
+[INFO] Training addon - Parent ............................ SUCCESS [  0.649 s]
+[INFO] Training Exercise - Services ....................... SUCCESS [  2.124 s]
+[INFO] Training Exercises - Webapp ........................ SUCCESS [  0.319 s]
+[INFO] Training Exercises - Packaging ..................... SUCCESS [  5.555 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.101 s
+[INFO] Finished at: 2020-12-17T11:12:47+01:00
+[INFO] ------------------------------------------------------------------------

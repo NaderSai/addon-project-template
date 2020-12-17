@@ -21,7 +21,8 @@ public class MyService {
      LOG.info("##################### Simple service started successfully !!");
   }
 
-  public void call() {
-    LOG.info("######################  call function invoked !!");
+  public String call() {
+    //LOG.info("######################  call function invoked !!");
+    return ("ca fonctionne!");
   }
 }

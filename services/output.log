@@ -1,0 +1,61 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----< org.exoplatform.addons.training:training-exercises-services >-----
+[INFO] Building Training Exercise - Services 1.0.x-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ training-exercises-services ---
+[INFO] Deleting /home/exo/addon-project-template/services/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-java-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.3.1:enforce (enforce-maven-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (default) @ training-exercises-services ---
+[INFO] Executing: /bin/sh -c cd /home/exo/addon-project-template/services && git rev-parse --verify HEAD
+[INFO] Working directory: /home/exo/addon-project-template/services
+[INFO] Storing buildNumber: c133e089877717f2f142aa13addf20d1c17a3d60 at timestamp: 20201217
+[INFO] Storing buildScmBranch: template/add-services
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ training-exercises-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ training-exercises-services ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /home/exo/addon-project-template/services/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 7
+[WARNING] source value 7 is obsolete and will be removed in a future release
+[WARNING] target value 7 is obsolete and will be removed in a future release
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+[WARNING] Exo JPA entity detected: org.exoplatform.addons.entity.FavouriteActivity
+[WARNING] Supported source version 'RELEASE_5' from annotation processor 'org.chromattic.apt.ChromatticProcessor' less than -source '7'
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ training-exercises-services ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/exo/addon-project-template/services/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ training-exercises-services ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ training-exercises-services ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.9.1:parse-version (parse-version) @ training-exercises-services ---
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ training-exercises-services ---
+[INFO] Building jar: /home/exo/addon-project-template/services/target/training-exercises-services.jar
+[INFO] 
+[INFO] --- maven-source-plugin:2.4:jar-no-fork (attach-sources) @ training-exercises-services ---
+[INFO] Building jar: /home/exo/addon-project-template/services/target/training-exercises-services-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ training-exercises-services ---
+[INFO] Installing /home/exo/addon-project-template/services/target/training-exercises-services.jar to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT.jar
+[INFO] Installing /home/exo/addon-project-template/services/pom.xml to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT.pom
+[INFO] Installing /home/exo/addon-project-template/services/target/training-exercises-services-sources.jar to /home/exo/.m2/repository/org/exoplatform/addons/training/training-exercises-services/1.0.x-SNAPSHOT/training-exercises-services-1.0.x-SNAPSHOT-sources.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.215 s
+[INFO] Finished at: 2020-12-17T11:12:24+01:00
+[INFO] ------------------------------------------------------------------------
