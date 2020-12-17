@@ -25,5 +25,6 @@ public class MyService {
   public String call() {
     //LOG.info("######################  call function invoked !!");
     return ("ca fonctionne!");
+    
   }
 }

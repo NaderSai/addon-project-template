@@ -51,7 +51,8 @@ class MyServiceTest {
   @Test
   void testCall() {
     MyService myService = new MyService();
-    myService.call();
+    
+    assertEquals("ca fonctionne!", myService.call());
   }
 
 }
