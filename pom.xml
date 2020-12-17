@@ -26,24 +26,19 @@
     <groupId>org.exoplatform.addons</groupId>
     <version>6</version>
   </parent>
-  <groupId>@@@groupId@@@</groupId>
-  <artifactId>@@@artifactId@@@</artifactId>
+  <groupId>org.exoplatform.addons.training</groupId>
+  <artifactId>training-exercices-parent</artifactId>
   <version>1.0.x-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>@@@name@@@</name>
-  <description>@@@description@@@</description>
+  <name>Training addon - Parent</name>
+  <description>Parent for training addon</description>
   <modules>
+    <module>services</module>
     <module>war</module>
     <module>packaging</module>
   </modules>
-  <scm>
-    <connection>scm:git:git://github.com/exo-addons/@@@git_project@@@.git</connection>
-    <developerConnection>scm:git:git@github.com:exo-addons/@@@git_project@@@.git</developerConnection>
-    <tag>HEAD</tag>
-    <url>https://github.com/exo-addons/@@@git_project@@@</url>
-  </scm>
   <properties>
-    <platform.version>@@@platform_version@@@</platform.version>
+    <platform.version>5.0.1</platform.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -54,6 +49,11 @@
         <version>${platform.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.kernel</groupId>
+        <artifactId>exo.kernel.commons</artifactId>
+        <version>${platform.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

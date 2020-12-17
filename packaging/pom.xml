@@ -2,24 +2,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>@@@groupId@@@</groupId>
-    <artifactId>@@@artifactId@@@</artifactId>
+    <groupId>org.exoplatform.addons.training</groupId>
+    <artifactId>training-exercices-parent</artifactId>
     <version>1.0.x-SNAPSHOT</version>
   </parent>
-  <artifactId>@@@artifactId@@@-packaging</artifactId>
+  <artifactId>training-exercices-packaging</artifactId>
   <packaging>pom</packaging>
-  <name>@@@name@@@ - Packaging</name>
+  <name>Training Exercises - Packaging</name>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>@@@artifactId@@@-war</artifactId>
-      <version>1.0.x-SNAPSHOT</version>
+      <artifactId>training-exercises-webapp</artifactId>
+      <version>${project.version}</version>
       <type>war</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>training-exercises-services</artifactId>
+      <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
-    <finalName>@@@artifactId@@@</finalName>
+    <finalName>training-exercises-packaging</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -32,7 +38,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
-              <finalName>@@@artifactId@@@</finalName>
+              <finalName>training-exercises-packaging</finalName>
               <appendAssemblyId>false</appendAssemblyId>
               <descriptors>
                 <descriptor>src/main/assemblies/packaging.xml</descriptor>

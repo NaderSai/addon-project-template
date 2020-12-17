@@ -46,7 +46,7 @@
           <field name="dependencies">
             <collection type="java.util.ArrayList">
               <value>
-                <string>@@@artifactId@@@</string>
+                <string>training-exercises-extension</string>
               </value>
             </collection>
           </field>
