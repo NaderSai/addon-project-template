@@ -34,6 +34,7 @@
     <property name="now" value="CURRENT_TIMESTAMP" dbms="mssql"/>
 
     <changeSet author="addon-training" id="1.0.0-1">
+        <validCheckSum>7:f620ffd34591e64cf5eabffed96fab56</validCheckSum>
         <createTable tableName="ADDON_FAVOURITE_ACTIVITY">
             <column name="ID" type="BIGINT" autoIncrement="${autoIncrement}" startWith="1">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_FAVOURITE_ACTIVITY"></constraints>
@@ -42,9 +43,9 @@
                 <constraints nullable="false"/>
             </column>
             <column name="FAVOURITE_BY_ID" type="BIGINT">
-                <constraints nullable="false"/>
+                <constraints nullable="true" foreignKeyName="FK_Target_Entity_Id" references="SOC_ACTIVITIES(ACTIVITY_ID)"/>
             </column>
-            <column name="ACTIVITY_ID" type="BIGINT">
+            <column name="ACTIVITY_ID" type="TEXT">
                 <constraints nullable="true"/>
             </column>
         </createTable>

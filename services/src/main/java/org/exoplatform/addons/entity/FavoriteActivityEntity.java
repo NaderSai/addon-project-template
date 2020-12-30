@@ -15,19 +15,25 @@ public class FavoriteActivityEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private Long id;
-    @ManyToOne
+
+    @Column(name="ACTIVITY_ID")
     private String activityTitle;
 
 
 
     @ManyToOne
+    @JoinColumn(name="FAVOURITE_BY_ID")
     private ActivityEntity targetActivity;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     @Column(name = "FAVOURITE_DATE")
     private Calendar favouriteDate;
 
+
+    public FavoriteActivityEntity() {
+    }
 
     public FavoriteActivityEntity(Long id, String activityTitle, ActivityEntity targetActivity, Calendar favouriteDate) {
         this.id = id;
