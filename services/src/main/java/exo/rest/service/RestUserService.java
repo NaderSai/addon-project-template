@@ -127,7 +127,7 @@ public class RestUserService implements ResourceContainer {
         cacheControl.setNoStore(true);
 
 
-        try {
+
             List<FavoriteActivityEntity> allFavoriteActivities = dao.findAllActivity();
 
 
@@ -141,9 +141,7 @@ public class RestUserService implements ResourceContainer {
             }
 
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
 
         return list;
     }

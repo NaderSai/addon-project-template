@@ -32,4 +32,14 @@
     <component>
         <type> org.exoplatform.addons.DAO.FavoriteActivityDAO</type>
     </component>
+
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.organization.OrganizationService</target-component>
+        <component-plugin>
+            <name>osend.mail.added.user</name>
+            <set-method>addListenerPlugin</set-method>
+            <type>org.exoplatform.addons.listener.MailSendListener</type>
+            <description>send mail after adding user</description>
+        </component-plugin>
+    </external-component-plugins>
 </configuration>
