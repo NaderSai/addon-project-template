@@ -33,6 +33,20 @@
         <type> org.exoplatform.addons.DAO.FavoriteActivityDAO</type>
     </component>
 
+
+    <component>
+        <type>org.exoplatform.services.scheduler.impl.QuartzSheduler</type>
+    </component>
+    <component>
+        <type>org.exoplatform.services.scheduler.QueueTasks</type>
+    </component>
+    <component>
+        <key>org.exoplatform.services.scheduler.JobSchedulerService</key>
+        <type>org.exoplatform.services.scheduler.impl.JobSchedulerServiceImpl</type>
+    </component>
+
+
+
     <external-component-plugins>
         <target-component>org.exoplatform.services.organization.OrganizationService</target-component>
         <component-plugin>
@@ -42,4 +56,41 @@
             <description>send mail after adding user</description>
         </component-plugin>
     </external-component-plugins>
+
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.listener.ListenerService</target-component>
+        <component-plugin>
+            <name>exo.core.security.ConversationRegistry.register</name>
+            <set-method>addListener</set-method>
+            <type>org.exoplatform.addons.listener.LoggedInUserListener</type>
+            <description>count the number of logged in user</description>
+        </component-plugin>
+    </external-component-plugins>
+
+
+
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.scheduler.JobSchedulerService</target-component>
+        <component-plugin>
+            <name>LoggedInNumberJob</name>
+            <set-method>addPeriodJob</set-method>
+            <type>org.exoplatform.services.scheduler.PeriodJob</type>
+            <description>Create a Job that Gives the number of logged-in users every 10 minutes</description>
+            <init-params>
+                <properties-param>
+                    <name>job.info</name>
+                    <description>save the Forums Weekly Statistic data  periodically</description>
+                    <property name="jobName" value="LoggedInNumberJob" />
+                    <property name="groupName" value="LoggedInNumberJobGroup" />
+                    <property name="job" value="org.exoplatform.addons.jobs.LoggedInNumberJob" />
+                    <property name="repeatCount" value="0" />
+                    <property name="period" value="600000" />
+                    <property name="startTime" value="+0" />
+                    <property name="endTime" value="" />
+                </properties-param>
+            </init-params>
+        </component-plugin>
+    </external-component-plugins>
+
+
 </configuration>
